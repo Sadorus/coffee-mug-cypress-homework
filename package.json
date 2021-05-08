@@ -1,0 +1,26 @@
+{
+  "name": "coffee-mug-cypress-homework",
+  "version": "1.0.0",
+  "description": "Cypress, Homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sadorus/coffee-mug-cypress-homework.git"
+  },
+  "keywords": [
+    "Cypress",
+    "homework"
+  ],
+  "author": "Mateusz Błoch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sadorus/coffee-mug-cypress-homework/issues"
+  },
+  "homepage": "https://github.com/Sadorus/coffee-mug-cypress-homework#readme",
+  "devDependencies": {
+    "cypress": "^7.2.0"
+  }
+}

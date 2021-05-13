@@ -1,0 +1,21 @@
+{
+  "name": "Bob",
+  "surname": "Tandem",
+  "email": "bobtandem419@gmail.com",
+  "age": "19",
+
+  "nameTooShort": "a",
+  "surnameTooShort": "b",
+
+  "nameTooLong": "MXjUFzdtPTGTzUrdtespUKJqsDNliHdCqrkMlRDAplisNIFzwdxTLNrboxDOlhIIeMNOdOM",
+  "surnameTooLong": "MXjUFzdtPTGTzUrdtespUKJqsDNliHdCqrkMlRDAplisNIFzwdxTLNrboxDOlhIIeMNOdOM",
+
+  "negativeAge": "-1",
+
+  "ageLetters": "seventeen",
+
+  "incorrectEmail": "testEmail",
+
+  "specialCharacters": "~!@#$%^&*()-_=+[]{}|;:,./<>?",
+  "number": "0123456789"
+}

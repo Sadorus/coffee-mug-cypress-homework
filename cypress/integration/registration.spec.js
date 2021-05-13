@@ -5,15 +5,15 @@ import registrationData from '../fixtures/registration.data.json'
 describe('Registration form', () => {
 
     beforeEach(() => {
-        cy.visit('https://coffeemug.z33.web.core.windows.net/')
-      })
-      it('Should be able to successfully create an account', () => {
+        cy.visit('https://coffeemug.z33.web.core.windows.net')
+    })
+    it('Should be able to successfully create an account', () => {
 
         cy.register({
             name: registrationData.name,
             surname: registrationData.surname,
             email: registrationData.email,
-            age: registrationData.age,
+            age: registrationData.age
         });
 
         cy.get(selectors.registrationForm).should('contain', 'Success Submit')
@@ -25,13 +25,13 @@ describe('Registration form', () => {
             name: registrationData.name,
             surname: '',
             email: registrationData.email,
-            age: '',
+            age: ''
         });
 
         cy.get(selectors.registrationForm).should('contain', 'Success Submit')
     });
 
-    it('Should be unable to register a new account using too short name and surname', () => {
+    it('Should be unable to register a new account using the too short name and surname', () => {
 
         cy.register({
             name: registrationData.nameTooShort,
@@ -45,7 +45,7 @@ describe('Registration form', () => {
         cy.get(selectors.surnameErrorLabel).should('contain', 'Too Short!')
     });
 
-    it('Should be unable to register a new account using too long name and surname', () => {
+    it('Should be unable to register a new account using the too long name and surname', () => {
 
         cy.register({
             name: registrationData.nameTooLong,
@@ -67,7 +67,7 @@ describe('Registration form', () => {
         cy.get(selectors.emailErrorLabel).should('contain', 'Required')
     });
 
-    it('Should be unable to register a new account using negative number in age', () => {
+    it('Should be unable to register a new account using negative number in the age input', () => {
 
         cy.register({
             name: registrationData.name,
@@ -80,7 +80,7 @@ describe('Registration form', () => {
         cy.get(selectors.ageErrorLabel).should('contain', 'age must be a positive number')
     });
 
-    it('Should be unable to register a new account using letters in age', () => {
+    it('Should be unable to register a new account using letters in the age input', () => {
 
         cy.register({
             name: registrationData.name,
@@ -93,7 +93,7 @@ describe('Registration form', () => {
         cy.get(selectors.ageErrorLabel).should('contain', 'age must be a `number` type, but the final value was: `NaN`')
     });
 
-    it('Should be unable to create an account using an incorrect email address format', () => {
+    it('Should be unable to create an account using an incorrect email address', () => {
 
         cy.register({
             name: registrationData.name,
@@ -128,18 +128,5 @@ describe('Registration form', () => {
         });
 
         cy.get(selectors.registrationForm).should('not.contain', 'Success Submit')
-    });
-
-    xit('Age - negative integer', () => {
-
-        cy.get(selectors.nameInput).type(registrationData.name)
-        cy.get(selectors.surnameInput).type(registrationData.surname)
-        cy.get(selectors.emailInput).type(registrationData.email)
-        cy.get(selectors.ageInput).type(-1)
-
-        cy.get(selectors.submitButton).click()
-
-        cy.get(selectors.registrationForm).should('not.contain', 'Success Submit')
-        cy.get(selectors.ageErrorLabel).should('contain', 'age must be a positive number')
     });
 });

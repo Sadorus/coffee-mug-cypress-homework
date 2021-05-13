@@ -14,10 +14,8 @@
 
   "ageLetters": "seventeen",
 
-  "incorrectEmail": "testemail",
+  "incorrectEmail": "testEmail",
 
   "specialCharacters": "~!@#$%^&*()-_=+[]{}|;:,./<>?",
-  "number": "0123456789",
-
-  "emptyValue": ""
+  "number": "0123456789"
 }

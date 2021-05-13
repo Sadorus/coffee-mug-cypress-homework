@@ -12,5 +12,5 @@ export default {
     submitButton: 'button[type=submit]',
 
     registrationForm: 'form'
-  };
+  }
 
